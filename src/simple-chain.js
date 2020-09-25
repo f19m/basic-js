@@ -18,12 +18,12 @@ const chainMaker = {
 
     if (typeof position != 'number'){
       this.chain = [];
-      throw new CustomError('Input value not a number');
+      throw 'Input value not a number';
     } 
 
     if (!this.chain.hasOwnProperty(position - 1)) {
       this.chain = [];
-      throw new CustomError('Incorrect index value')
+      throw 'Incorrect index value'
     };
     
     this.chain.splice(position - 1, 1);
